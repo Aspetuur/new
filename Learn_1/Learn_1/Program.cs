@@ -15,15 +15,15 @@ class Program
             symbols = System.Text.Encoding.UTF8.GetString(buffer);
         }
 
-        int max = 0, c = 0;
+        int mak = 0, c = 0;
 
         for (int i = 0; i < symbols.Length; i++)
         {
             if (symbols[i] == 'A' || symbols[i] == 'E')
             {
-                if (c > max)
+                if (c > mak)
                 {
-                    max = c;
+                    mak = c;
                 }
 
                 c = 0;
@@ -34,7 +34,7 @@ class Program
             }
         }
 
-        Console.WriteLine($"Длина длиной подцепочки без гласных букв в строке - {max}");
+        Console.WriteLine($"Длина длиной подцепочки без гласных букв в строке - {mak}");
     }
 }
 
