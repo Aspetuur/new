@@ -5,21 +5,21 @@ class Program
 {
     static void Main(string[] args)
     {
-        string symbols;
+        string symbol;
 
         using (FileStream fstream = File.OpenRead("task1.txt"))
         {
             byte[] buffer = new byte[fstream.Length];
             fstream.Read(buffer, 0, buffer.Length);
 
-            symbols = System.Text.Encoding.UTF8.GetString(buffer);
+            symbol = System.Text.Encoding.UTF8.GetString(buffer);
         }
 
         int mak = 0, c = 0;
 
-        for (int i = 0; i < symbols.Length; i++)
+        for (int i = 0; i < symbol.Length; i++)
         {
-            if (symbols[i] == 'A' || symbols[i] == 'E')
+            if (symbol[i] == 'A' || symbol[i] == 'E')
             {
                 if (c > mak)
                 {
@@ -34,7 +34,7 @@ class Program
             }
         }
 
-        Console.WriteLine($"Длина длиной подцепочки без гласных букв в строке - {mak}");
+        Console.WriteLine($"Длина самой длиной подцепочки без гласных букв в строке - {mak}");
     }
 }
 
