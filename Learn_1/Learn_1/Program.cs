@@ -15,15 +15,15 @@ class Program
             symbols = System.Text.Encoding.UTF8.GetString(buffer);
         }
 
-        int max = 0, counter = 0;
+        int max = 0, c = 0;
 
         for (int i = 0; i < symbols.Length; i++)
         {
             if (symbols[i] == 'A' || symbols[i] == 'E')
             {
-                if (counter > max)
+                if (c > max)
                 {
-                    max = counter;
+                    max = c;
                 }
 
                 counter = 0;
