@@ -26,15 +26,15 @@ class Program
                     max = c;
                 }
 
-                counter = 0;
+                c = 0;
             }
             else
             {
-                counter++;
+                c++;
             }
         }
 
-        Console.WriteLine($"Длина длинейшей подцепочки без гласных в строке - {max}");
+        Console.WriteLine($"Длина длиной подцепочки без гласных букв в строке - {max}");
     }
 }
 
